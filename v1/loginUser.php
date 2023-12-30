@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 			$user = $db->getUserByStaffId($_POST['staffID']);
 			$response['error'] = false; 
 			$response['Id'] = $user['Id'];
-			$response['Staff ID'] = $user['staff_ID'];
+			$response['Staff ID'] = $user['staff_ID']; 
 			$response['Username'] = $user['Username'];
 		}else{
 			$response['error'] = true; 

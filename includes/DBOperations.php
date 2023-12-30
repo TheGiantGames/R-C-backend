@@ -85,7 +85,14 @@ class DBOperations{
          
     }
 
-
-
+    
+    public function projectDetailsByStaffId($staffID){
+        $stmt = $this->con->prepare("SELECT * FROM projects WHERE staff_ID = $staffID ");
+        //$h = $people;
+        //$stmt->bind_param('s', $h);
+        $stmt->execute();
+        return $stmt->get_result()->fetch_assoc();
+        //return $people;
+    }
 
 }

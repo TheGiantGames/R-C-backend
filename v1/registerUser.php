@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                         $createPassResult = $db->createPassword($userResult['Id'],$_POST['password'] );
                         if($createPassResult){
                             $response['error'] = false;
-                            $response['message'] = "password saved successfully";
+                            $response['message'] = "Registered Successfully";
                         }else{
                             $response['error'] = true;
                             $response['message'] = "Error occured in storing password";
